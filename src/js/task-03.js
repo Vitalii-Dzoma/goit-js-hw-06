@@ -13,19 +13,19 @@ const images = [
   },
 ];
 const ulEl = document.querySelector('.gallery')
+let result = "";
 const imgElements = images
   .map(image => {
     const imgElement = document.createElement('img');
-    const liElement = document.createElement('li')
+    const liElement = document.createElement('li');
+    liElement.classList.add('item-img')
     imgElement.src = image.url;
     imgElement.alt = image.alt;
-    // `<li class="list-item"><img src: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260', alt = "White and Black Long Fur Cat">${imgElement}</li>`;
-    liElement.appendChild(imgElement)
-    return liElement;
-  })
-  .join('')
-  // const liElement = document.createElement('li')
-  // liElement.appendChild(imgElement)
-  // return liElement;
+    imgElement.width = 300;
+    result += `<li class="item-img"><img src="${image.url}" alt="${image.alt}" width="300"></li>`;
 
-ulEl.insertAdjacentHTML("afterbegin", imgElements)
+    return result;
+  })
+
+
+ulEl.insertAdjacentHTML("afterbegin", result)
