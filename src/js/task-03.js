@@ -16,12 +16,7 @@ const ulEl = document.querySelector('.gallery')
 let result = "";
 const imgElements = images
   .map(image => {
-    const imgElement = document.createElement('img');
-    const liElement = document.createElement('li');
-    liElement.classList.add('item-img')
-    imgElement.src = image.url;
-    imgElement.alt = image.alt;
-    imgElement.width = 300;
+ 
     result += `<li class="item-img"><img src="${image.url}" alt="${image.alt}" width="300"></li>`;
 
     return result;

@@ -15,9 +15,9 @@ const formSubmit = (event) => {
             alert("Необходимо заполнить все поля!!!")
           
         }
-        console.log(result)
+        
 }
-       
+       console.log(result)
 
  formEl.reset()
 

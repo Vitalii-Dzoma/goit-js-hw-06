@@ -4,7 +4,7 @@ const outputEl = document.querySelector('#name-output');
 
 const addValueFromInput = () => {
     if (!inputEl.value) {
-       return outputEl.textContent;
+       return outputEl.textContent = "Anonymous";
     }
     return outputEl.textContent = inputEl.value;
 }

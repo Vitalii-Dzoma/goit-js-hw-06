@@ -16,6 +16,7 @@ const createBoxes = function (amount) {
     console.log(divCreate)
     divList.append(divCreate)
   }
+
 }
 btnCreate.addEventListener('click', createBoxes)
 const destroyBoxes = function () {
